@@ -1,0 +1,152 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+	<link rel="stylesheet" href="style_login.css">
+	<link rel="icon" type="image/x-icon" href="images/logo.png">
+	<title>Log-in Page</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="scripts.js" type="text/javascript">
+		<!--
+		var TRange=null;
+		function findString (str) {
+		 if (parseInt(navigator.appVersion)<4) return;
+		 var strFound;
+		 if (window.find) {
+
+		  strFound=self.find(str);
+		  if (strFound && self.getSelection && !self.getSelection().anchorNode) {
+		   strFound=self.find(str)
+		  }
+		  if (!strFound) {
+		   strFound=self.find(str,0,1)
+		   while (self.find(str,0,1)) continue
+		  }
+		 }
+		 else if (navigator.appName.indexOf("Microsoft")!=-1) {
+
+
+		  if (TRange!=null) {
+		   TRange.collapse(false)
+		   strFound=TRange.findText(str)
+		   if (strFound) TRange.select()
+		  }
+		  if (TRange==null || strFound==0) {
+		   TRange=self.document.body.createTextRange()
+		   strFound=TRange.findText(str)
+		   if (strFound) TRange.select()
+		  }
+		 }
+		 else if (navigator.appName=="Opera") {
+		  alert ("Opera browsers not supported, sorry...")
+		  return;
+		 }
+		 if (!strFound) alert ("String '"+str+"' not found!")
+		 return;
+		}
+		//-->
+	</script>
+</head>
+
+<body>
+	<div class="header">
+  		<a href="index.html" class="logo">
+  			<img src="https://www.pdrf.org/wp-content/uploads/2021/03/logo-with-text.svg" alt="logo image" height=25px>
+  		</a>
+    	<a class="hvr-underline-from-center" href="index.html">Home</a>
+    	<a href="files/aboutus.html" class="hvr-underline-from-center">About</a>
+    	<a href="page2" class="hvr-underline-from-center">Resources</a>
+    	<a href="files/programs.html" class="hvr-underline-from-center">Programs</a>
+
+  		<form name="f1" action="" onSubmit="if(this.t1.value!=null && this.t1.value!='') findString(this.t1.value);return false">
+    		<input type="text" name=t1 value="" size=20 placeholder="Press enter to search">
+		</form>
+	</div>
+
+	<div class="BTP">
+		<a href="#heroimage">Back to Top</a>
+	</div>
+
+	<div class="hero-image" id="heroimage">
+  		<div class="hero-text">
+    		<h1 id="mainhero"></h1>
+    		<h1 id="subhero">
+    	</div>
+	</div>
+	
+		<div class="main-content">
+
+				<div class="ColorUnderlay">
+					<div class="Underlay-Text">
+						<p id="WHTBold">Why I chose this charity</p>
+						<p id="WHT">
+							As a concerned and socially responsible citizen, I chose to advocate for the Philippine Disaster Resilience Foundation (PDRF). The PDRF is a non-profit organization dedicated to increasing the country's resilience to natural disasters and other calamities.
+							<br><br>To begin, the Philippines is prone to natural disasters such as typhoons, earthquakes, and volcanic eruptions. These disasters have the potential to devastate the lives and livelihoods of millions of Filipinos. The PDRF has worked relentlessly to help communities in preparing for disasters, responding efficiently to emergencies, and recovering rapidly from catastrophes.
+							<br><br>Second, PDRF has a successful track record in catastrophe risk reduction and management. Since its inception in 2009, the PDRF has been at the forefront of disaster relief operations in the Philippines. To execute creative and effective disaster preparedness and response initiatives, the organization has cooperated with the government, commercial sector, and other stakeholders. The PDRF has also been critical in the country's disaster response efforts, particularly in the aftermath of catastrophic catastrophes like Typhoon Haiyan and the Marawi Siege.
+							<br><br>Finally, I have chosen the Philippine Disaster Resilience Foundation as my preferred charity organization due to its critical mission of increasing the country's resilience to natural disasters and other emergencies, its proven track record of success in disaster risk reduction and management, and its comprehensive and inclusive approach to disaster preparedness and response efforts.
+						</p>
+					</div>
+				</div>
+
+				<div class="ColorUnderlay2">
+					<form class="form">
+						<div class="firstName">
+						  <label><h2>First Name: </h2></label>
+							<input type="text" name="firstName" id="firstName" spellcheck="false" placeholder="First Name" required>
+						  <div id="firstNameWarning"></div>
+						</div>
+
+						<div class="lastName">
+						  <label><h2>Last Name: </h2></label>
+						  	<input type="text" name="lastName" id="lastName" spellcheck="false" placeholder="Last Name" required>
+						  <div id="lastNameWarning"></div>
+						</div>
+
+						<div class="gender">
+							<label>Gender:</label>
+							<div class="radio-buttons">
+							  <input type="radio" id="male" name="gender" value="male" required>
+								<label for="male">Male</label>
+						
+							  <input type="radio" id="female" name="gender" value="female" required>
+								<label for="female">Female</label>
+						
+							  <input type="radio" id="other" name="gender" value="other" required>
+								<label for="other">Other</label>
+							</div>
+						  </div>
+
+						<div class="email">
+						  <label><h2>Email Address: </h2></label>
+						  	<input type="text" name="email" id="email" spellcheck="false" placeholder="Email Address" required>
+						  <div id="emailWarning"></div>
+						</div>
+
+						<div class="contactNo">
+							<label><h2>Contact Number: </h2></label>
+								<input type="text" name="contactNo" id="contactNo" spellcheck="false" placeholder="Contact Number">
+						  </div>
+
+						<input type="submit" class="submit"></button>
+						<button type="button" class = "reset" onclick="resetForm()">Reset</button>	
+					</div>			  
+				</div>				
+
+	<footer>
+		<div class="footer">
+			<hr>
+			<img src="https://www.pdrf.org/wp-content/uploads/2021/03/logo-with-text.svg" alt="Logo Footer" class="imagevar2">
+			<p class="footertext">2nd Floor, Employee Service Building,
+				<br>Meralco Compound, Ortigas Avenue,
+				<br>Meralco Compound, Ortigas Avenue,
+				<br>+63 (2) 88442700
+				<br>pdrfcentral@pdrf.org.ph
+			</p>
+			<a href="https://twitter.com/barium26" id="twt"><span></span></a>
+			<a href="https://www.facebook.com/profile.php?id=100016815134594" id="fb"><span></span></a>
+		</div>
+	</footer>
+</body>
+
+</html>
